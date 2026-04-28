@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Company Catalog</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Roboto', Arial, sans-serif;
+    background: #0f172a;
+    color: white;
+}
+
+/* HEADER */
+.header {
+    text-align: center;
+    padding: 20px;
+    background: #111827;
+}
+
+.header h1 { margin: 0; font-size: 28px;font-family:"Great Vibes", cursive; }
+.header p { color: #9ca3af; }
+.tag {
+    color: green;
+    
+}
+.tag1 {
+    color: brown;
+}
+.tag2 {
+    color: #f59e0b;
+}
+
+/* SWIPER */
+.swiper {
+    width: 100%;
+    height: 95vh;
+}
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CARD */
+.page {
+    width: 90%;
+    max-width: 400px;
+    background: #1f2937;
+    border-radius: 15px;
+    overflow: hidden;
+    height: 100%;
+
+    position: relative;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+.page img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.desc {
+    padding: 15px;
+}
+
+.desc h3 { margin: 0; }
+
+.desc p {
+    font-size: 14px;
+    color: #9ca3af;
+    ;
+}
+
+/* SOCIAL BUTTONS INSIDE CARD */
+.social {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    background: #111827;
+}
+
+.social a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    background: #2563eb;
+    padding: 8px 10px;
+    border-radius: 8px;
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    padding: 30px;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    font-size: 22px;
+    color: white;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    opacity: 0.7;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div class="header">
+    <h1>Wendi Farms</h1>
+    <p>
+        <span class="tag">Premium</span>•<span class="tag1"> Quality </span>•<span class="tag2">  beans</span>
+    </p>
+</div>
+
+<!-- SWIPER -->
+<div class="swiper">
+    <div class="swiper-wrapper">
+
+        <!-- PAGE 1 -->
+        <div class="swiper-slide">
+            <div class="page">
+                <img src="images/w5.jpeg">
+                <div class="desc">
+                    <h3>About Wendi Farms</h3>
+                    <p>Wendi Farms links local farmers to the world’s favorite coffee experiences..</p>
+                </div>
+                <div class="social">
+                    <a href="https://wa.me/213552189997">WhatsApp</a>
+                    <a href="https://www.wendifarms.com/products.html">🌐 site</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- PAGE 2 -->
+        <div class="swiper-slide">
+            <div class="page">
+                <img src="images/w1.jpeg">
+                <div class="desc">
+                    <h3>Coffee beans</h3>
+                    <p>High-quality coffee beans sourced from local farmers to the world’s favorite coffee experiences.</p>
+                </div>
+                <div class="social">
+                    <a href="https://wa.me/213552189997">WhatsApp</a>
+                    <a href="https://www.wendifarms.com/products.html">🌐 site</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- PAGE 3 -->
+        <div class="swiper-slide">
+            <div class="page">
+                <img src="images/w4.jpeg">
+                <div class="desc">
+                    <h3>Be our Ambassador</h3>
+                    <p>Join our team and help us spread the word about Wendi Farms.</p>
+                </div>
+                <div class="social">
+                    <a href="https://wa.me/213552189997">WhatsApp</a>
+                    <a href="https://www.wendifarms.com/products.html">🌐 site</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="swiper-pagination"></div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+    <div class="social-icons">
+        <a href="https://www.instagram.com/wendifarms?igsh=MWdzdzlyaXQ3MzJvaw=="><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@wendifcoffee?_r=1&_t=ZN-95vHtIfND0A"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="mailto:info@wendifarms.com"><i class="fa-solid fa-envelope"></i></a>
+    </div>
+
+    <p>© <span id="year"></span> Wendi Farms</p>
+</div>
+
+<!-- SCRIPTS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+const swiper = new Swiper('.swiper', {
+    loop: true,
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+    },
+});
+
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
