@@ -22,23 +22,56 @@ body {
 
 /* HEADER */
 .header {
-    text-align: center;
+    
     padding: 20px;
     background: #111827;
     margin-bottom: 0;
 }
 
-.header h1 { margin: 0; font-size: 28px;font-family:"Great Vibes", cursive; }
-.header p { color: #9ca3af; }
-.tag {
-    color: green;
-    
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+   margin-right: 10px;
+   font-size: 12px;
+    padding: 12px 20px;
+    background: #111827;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
-.tag1 {
-    color: brown;
+
+.logo {
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    font-family:"Great Vibes", cursive;
+    margin-left: 0;
 }
-.tag2 {
-    color: #f59e0b;
+
+.nav-links {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #9ca3af;
+    padding: 8px 8px;
+    border-radius: 15px;
+    transition: 0.3s;
+    font-weight: 200;
+}
+
+.nav-links a:hover {
+    background: #1f2937;
+    color: white;
+}
+
+.nav-links a.active {
+    background: #f59e0b;
+    color: black;
 }
 /* CART BOX */
 .cart-box {
@@ -55,7 +88,7 @@ body {
 
 /* ABOUT SECTION */
 #about {
-    padding: 20px 30px;
+    padding: 10px 20px;
     background: #0f172a;
     gap: 40px;
     padding-top: 10px;
@@ -67,7 +100,7 @@ body {
 
 /* LEFT SIDE */
 .booking-info {
-    z-index: 1;
+    z-index: 2;
     position: relative;
     border-radius: 20px;
      background: #1f2937;
@@ -95,7 +128,7 @@ body {
    height: 60vh;
     position:sticky;
     top: 0;
-    z-index: 2;
+    z-index: 1;
      display: flex;
 
 }
@@ -211,16 +244,22 @@ body {
 
 <!-- HEADER -->
 <div class="header">
-    <h1>Wendi Farms</h1>
-    <p>
-        <span class="tag">Premium</span>•<span class="tag1"> Quality </span>•<span class="tag2">  beans</span>
-    </p>
+    <div class="navbar">
+    <div class="logo">
+        Wendi Farms
+    </div>
+
+    <div class="nav-links">
+        <a href="#about" class="nav-link active">About</a>
+        <a href="#products" class="nav-link">Products</a>
+    </div>
+
 </div>
 
 <div class="cart-box" onclick="sendToWhatsApp()">
     🛒  (<span id="cart-count">0</span>)
 </div>
-<h2 class="section-title">About Wendi </h2>
+<h2 class="section-title">About Wendi farms</h2>
 <section id="about">
 
   <!-- LEFT SIDE (ABOUT TEXT) -->
@@ -258,6 +297,7 @@ body {
 <h2 class="section-title">Our Products</h2>
 
 <!-- SWIPER -->
+ <section id="products">
 <div class="swiper">
     
     <div class="swiper-wrapper">
@@ -329,7 +369,7 @@ body {
 
     <div class="swiper-pagination"></div>
 </div>
-
+ </section>
 <!-- FOOTER -->
 <div class="footer">
     <div class="social-icons">
